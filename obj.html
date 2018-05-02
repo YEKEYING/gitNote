@@ -34,13 +34,29 @@
       model: "500",
       year: 1957,
       color: "Medium Blue",
+      started: false,
       passengers: 2,
       convertible: false,
       mileage: 88000,
+      start: function () {
+        this.stared = true;
+      },
+      stop: function () {
+        this.started = false;
+      },
       drive: function() {
-        alert("Zoom zoom!");
+        if (this.started) {
+          alert("Zoom zoom!");
+        } else {
+          alert("You need to start the engine first.");
+        }
       }
     }
+    fiat.start();
+    fiat.drive();
+    fiat.stop();
+    
+
     function isNewCar(car) {
       if (car.year >= 2017 && car.mileage <= 10000) {
         document.write(car.make + "是新车<br>");
