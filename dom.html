@@ -8,12 +8,20 @@
   <script>
     function init() {
       var h1obj = document.getElementById("title");
-      var picobj = document.getElementById("pic");
+      picobj = document.getElementById("pic");
       //alert(h1obj.innerHTML);
       h1obj.innerHTML = "GOODBYE WORLD!!";
       h1obj.setAttribute("class","tit");
       picobj.setAttribute("src","1.jpg");
-      picobj.setAttribute("alt");
+      picobj.getAttribute("alt");
+    }
+
+    function changePicture() {
+      if (picobj.getAttribute("src") == "1.jpg") {
+        picobj.setAttribute("src", "2.jpg");
+      }else {
+        picobj.setAttribute("src","1.jpg");
+      }
     }
     window.onload = init;
   </script>
@@ -21,5 +29,6 @@
 <body>
   <h1 id="title">hello world!</h1>
   <img id="pic" alt="复联图片">
+  <button onclick="changePicture()">点我换图</button>
 </body>
 </html>
