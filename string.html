@@ -23,6 +23,15 @@
 
     var IDcard = "320582200104135122";
     document.write(IDcard.substring(6,10)+"年"+IDcard.substring(10,12)+"月"+IDcard.substring(12,14)+"日");
+    document.write("<br>");
+
+    var phone = "051268716929";
+    document.write(phone.substring(0,4) + "-" +phone.substring(5,13));
+    document.write("<br>");
+
+    var arrstr = "100,23,90,233,85,79";
+    var vals = arrstr.split(",");
+    document.write(vals[3]);
     }
   window.onload = init;
   </script>
